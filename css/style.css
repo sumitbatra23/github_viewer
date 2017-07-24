@@ -1,0 +1,232 @@
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	font-family: 'Roboto Slab', segoe ui, sans-serif;
+    font-weight: 300;
+    color: rgb(60, 60, 60);
+}
+
+.main{
+	background-color: #F0F0F0;
+	width: 80%;
+	height: auto;
+	margin: 5% 10% 4% 10%;
+	border-radius: 15px;
+	border: 3px solid grey; 
+	box-shadow: 4px 4px 7px silver;
+}
+
+.header{
+	background-color: #424242;
+	color: white;
+	width: 100%;
+	text-align: center;
+	padding: 1%;
+	box-sizing: border-box;
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+}
+
+.inner-box{
+	background-color: white;
+	width: 85%;
+	margin: 1% 7.5% 4% 7.5%;
+	border:2px solid grey;
+	border-radius: 6px ;
+}
+
+.one{
+	height: 12%;
+}
+
+.two{
+	height: auto;
+}
+
+.three{
+	width: 9	0%;
+	height: auto;
+	margin: 5% 3% 4% 5%;
+	position: static;
+	box-sizing: border-box;
+	clear: both;
+
+}
+
+.search-box{
+	margin:5%;
+	padding: 1% 1% 1% 6%;
+	color: grey;
+	width: 60%;
+	border-radius: 20px;
+	border:2px solid grey;
+	background-image:url('http://i47.tinypic.com/r02vbq.png');
+	background-repeat:no-repeat;
+	background-position:left center;
+	outline:0;
+    outline-style: none;
+	transition: all 0.5s ease;
+}
+
+.search-box:focus{
+	border:2px solid black;
+}
+
+.search-btn{
+	padding: 1% 2% 1% 2%;
+	border-radius: 20px;
+	color: grey;
+	transition: all 0.5s ease;	
+	background-color: white;
+	border:2px solid grey;
+	outline: 0;
+    outline-style: none;
+	z-index: 1;
+	position: relative;
+	left: -14.9%;
+}
+
+.search-box:focus .search-btn{
+	border-color: black;
+}
+
+.search-btn:hover{
+	background-color: grey;
+	color:white;
+	border-color: black;
+}
+
+.profile_pic{
+	width: 17.5%;
+	height: 17.5%;
+	margin: 5% 3% 4% 5%;
+	border-radius:5px;
+	border:2px solid grey;
+	opacity: 0.8;
+	transition: all 0.5s ease;
+}
+
+.profile_pic:hover{
+	opacity: 1;
+}
+
+.img{
+	width: 100%;
+	height: 100%;
+}
+
+.user_name{
+	border:2px solid grey;
+	border-radius: 4px;
+	margin:3%;
+	padding: 2%;
+	box-sizing: border-box;
+	transition: all 0.5s ease;
+	
+}
+
+.user_name:hover{
+	border-color: black;
+	font-weight: bold;
+}
+
+.basic_info{
+	border:2px solid grey;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin:3%;
+	padding: 2%;
+	min-height:20%;
+
+}
+
+.basic_info:hover{
+	border-color: black;
+	font-weight: bold;
+}
+
+.header2{
+	width: 90%;
+	margin: 5% 5% 0 5%;
+	box-sizing: border-box;
+	background-color: #EEEEEE;
+	padding: 2%;
+	border-top: 2px solid darkgrey;
+}
+
+.table_edit{
+	width: 90%;
+	background-color: white;
+	border-collapse: collapse;
+	border-color: black;
+	margin: 0 5% 5% 5%;
+}
+
+
+.table_edit th {
+	background-color: #9E9E9E;
+	color: white;
+	padding: 1%;
+}
+
+.table_edit th:hover{
+	cursor: pointer;
+	background-color: grey;
+}
+
+.table_edit tr {
+	transition: all 0.2s ease;
+	border-bottom: 1px solid grey;
+}
+
+.table_edit tr:hover {
+	background-color: lightgrey;
+	font-weight: bold;
+}
+
+.table_edit td{
+	text-align: center;
+	padding: 1%;
+}
+
+@media screen and (max-width: 760px) {
+	.search-btn{
+		position: relative;
+		margin: 5%;
+		top:10%;
+		left:0.1%;
+		width: 85%;
+	}   
+	.search-box{
+		padding-left: 12%;
+		width: 70%;
+		margin-bottom: 2%;
+	}
+	.three{
+		display: block;
+		clear: both;
+		width: 80%;
+		position: relative;
+		left: 5%;
+	}
+
+	.profile_pic, .img{
+		border-radius: 50%;	
+	}
+
+	.profile_pic{
+	width: 20.5%;
+	margin-left: 40%;
+	}
+
+	.table_edit td{
+		padding:0.3%;
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myCtrl">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300|Roboto:100" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="header">Github Viewer v1.0.1</div>
+		<h1><center>Github Viewer</center></h1>
+		<div class="inner-box one">
+			<input type="text" placeholder="Enter Username to get repo list" class="search-box" name="search" ng-model="search">
+			<input type="submit" class="search-btn" value="Search" onclick="update()">
+		</div>
+
+		<div class="inner-box two">
+			<div class="profile_pic">
+				<img src="{{avatar_url}}" class="img">
+			</div>
+			<div class="inner-box three">
+				<div class="user_name"><strong>Name : </strong> {{name}}</div>
+				<div class="basic_info">
+					<STRONG>Bio : </STRONG>{{bio}}<br>
+					<strong>Company : </strong>{{company}}<br>
+					<strong>Followers : </strong>{{followers}}<br>
+					<strong>Following : </strong>{{following}}<br>
+					<strong>Location : </strong>{{location}}
+				</div>
+			</div>
+			<div class="header2">
+				Repositories
+			</div>
+			<table class="table_edit">
+				<tr>
+					<th ng-click="orderByMe('-stargazers_count')">Stars</th>
+					<th ng-click="orderByMe('name')">Name</th>
+					<th ng-click="orderByMe('language')">Language</th>
+				</tr>
+				<tr ng-repeat="x in repos | orderBy: myOrderBy">
+					<td>{{x.stargazers_count}}</td>
+					<td>
+						<a href="https://github.com/{{search}}/{{x.name}}" target="_blank" style="text-decoration: none;color:grey;">
+						{{x.name}}</a>
+					</td>
+					<td>{{x.language}}</td>
+				</tr>
+			</table>
+			</div>
+		</div>
+	</body>
+</html>
